@@ -10,3 +10,23 @@ services:
       - ./app:/app
     command: >
       sh -c "python manage.py runserver 0.0.0.0:8000"
+    environment:
+      - DB_HOST=postgres
+      - DB_USER=garibtig
+      - DB_PASSWORD=23456
+    depends_on:
+      - postgres
+
+
+  postgres:
+    image: postgres:14-alpine
+    ports:
+      - 5432:5432
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_PASSWORD=123456
+      - POSTGRES_USER=garibtig
+      - POSTGRES_DB=jango
+volumes:
+  db-data:
