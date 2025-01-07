@@ -12,11 +12,11 @@ services:
       sh -c "python manage.py runserver 0.0.0.0:8000"
     environment:
       - DB_HOST=postgres
+      - DB_NAME=jango
       - DB_USER=garibtig
       - DB_PASSWORD=23456
     depends_on:
       - postgres
-
 
   postgres:
     image: postgres:14-alpine

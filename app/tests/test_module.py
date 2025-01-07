@@ -19,4 +19,4 @@ class TestCalculator(SimpleTestCase):
     def test_multiple_numbers(self):
         "Test case will multiply 2 numbers"
         result = calculator.multiply(2,3)
-        self.assertEquals(result, 6)
+        self.assertEqual(result, 6)
