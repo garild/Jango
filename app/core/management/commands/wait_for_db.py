@@ -1,6 +1,7 @@
 """
-Djanfo coomand to wait for the database to be available 
+Djanfo coomand to wait for the database to be available
 """
+
 import time
 from psycopg2 import OperationalError as Psycopg2Error
 
@@ -22,5 +23,5 @@ class Command(BaseCommand):
             except (Psycopg2Error, OperationalError):
                 self.stderr.write('Database is down, awaiting 1 sec.')
                 time.sleep(1)
-            
+
         self.stdout.write('Database is UP .')
