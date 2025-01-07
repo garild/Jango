@@ -14,7 +14,7 @@ services:
       - DB_HOST=postgres
       - DB_NAME=jango
       - DB_USER=garibtig
-      - DB_PASSWORD=23456
+      - DB_PASSWORD=123456
     depends_on:
       - postgres
 
