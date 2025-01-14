@@ -39,8 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'core',
-    'rest_framework',
-    'drf_spectacular'
+    'rest_framework', #used for test e.g. user app
+    'drf_spectacular', #swagger doc
+    'user'
 ]
 
 MIDDLEWARE = [
